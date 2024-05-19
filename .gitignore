@@ -1,3 +1,8 @@
+#data
+*/data
+*.jsonl
+*.gz
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -120,6 +125,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
+/mr_env
 .env
 .venv
 env/
