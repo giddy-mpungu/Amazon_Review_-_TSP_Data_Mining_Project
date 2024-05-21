@@ -3,7 +3,7 @@ import json
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import nltk
 
-# Ensure the VADER lexicon is available
+# Ensuring the VADER lexicon is available
 nltk.download('vader_lexicon')
 
 class SentimentAnalysis(MRJob):
