@@ -8,7 +8,7 @@ class AverageHelpfulnessScore(MRJob):
     def mapper(self, _, line):
         review = json.loads(line)
         helpful_votes = review['helpful_votes']
-        total_votes = review['helpful_votes'] + review['total_votes']
+        total_votes = review['total_votes']
         yield review['asin'], (helpful_votes, total_votes)
 
     def reducer(self, key, values):
@@ -17,7 +17,13 @@ class AverageHelpfulnessScore(MRJob):
         for helpful, total in values:
             total_helpful += helpful
             total_votes += total
-        yield key, total_helpful / total_votes
+        if total_votes > 0:
+            yield key, total_helpful / total_votes
+        else:
+            yield key, 0
 
 if __name__ == '__main__':
     AverageHelpfulnessScore.run()
+
+
+# python average_helpfulness.py .\data\all_appliances.jsonl

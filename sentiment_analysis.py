@@ -1,14 +1,21 @@
 from mrjob.job import MRJob
 import json
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+import nltk
+
+# Ensure the VADER lexicon is available
+nltk.download('vader_lexicon')
 
 class SentimentAnalysis(MRJob):
 
+    def mapper_init(self):
+        # Initialize the SentimentIntensityAnalyzer once per mapper instance
+        self.sid = SentimentIntensityAnalyzer()
+
     def mapper(self, _, line):
         review = json.loads(line)
-        text = review['text']
-        sid = SentimentIntensityAnalyzer()
-        sentiment_score = sid.polarity_scores(text)
+        text = review['text']  # Ensure this matches your data's text field
+        sentiment_score = self.sid.polarity_scores(text)
         
         # Classify sentiment based on compound score
         if sentiment_score['compound'] >= 0.05:
@@ -25,3 +32,5 @@ class SentimentAnalysis(MRJob):
 
 if __name__ == '__main__':
     SentimentAnalysis.run()
+
+# python sentiment_analysis.py .\data\all_reviews.jsonl
