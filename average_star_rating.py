@@ -26,3 +26,5 @@ class AverageRatingByProduct(MRJob):
     
 if __name__ == '__main__':
     AverageRatingByProduct.run()
+
+# python average_star_rating.py .\data\Beauty_and_Personal_Care.jsonl >.\results\average_star_rating_byproduct.csv

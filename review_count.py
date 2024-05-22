@@ -25,3 +25,6 @@ class ReviewCountByProduct(MRJob):
 
 if __name__ == '__main__':
     ReviewCountByProduct.run()
+
+
+# python review_count.py .\data\dt_subset.jsonl >.\results\review_count_byproduct.csv
