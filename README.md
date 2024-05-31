@@ -1,4 +1,11 @@
-# Amazon Beauty and Personal Care Reviews Analysis 🛍️✨
+# Data Mining Project:
+Welcome to the **Data Mining Project** repository!
+
+This project Covers two Problems:
+1. Amazon Reviews Analysis using Map Reduce
+2. The Traveling Salesman Problem (TSP)
+
+## Amazon Beauty and Personal Care Reviews Analysis 🛍️✨
 
 Welcome to the **Amazon Beauty and Personal Care Reviews Analysis** repository!
 
@@ -112,10 +119,18 @@ To reproduce the results of this project, follow these steps:
 4. Run the desired MapReduce jobs using the commands provided.
 5. The results will be stored in the `results` folder.
 
-## ✨ Conclusion
-
 This repository provides a basic framework for analyzing customer reviews for Beauty & Personal Care products on Amazon using MapReduce. 
 
-You can extend this approach to implement additional analyses or modify the existing scripts for more specific needs.
+
+# The Traveling Salesman Problem (TSP) ✨
+To tackle the Traveling Salesman Problem (TSP) , we intend to find the shortest possible route that visits each city exactly once and returns to the starting city (City 1). 
+
+The problem involves several steps: enumerating possible paths, calculating distances, and identifying the minimum distance path. Additionally, we aim to implement a solution using Python and explore a sub-optimal solution using Self-Organizing Maps (SOM). Below is a structured approach to solving the problem.
+
+Python NoteBook Here:
+
+## Conclusion
+
+You can extend this approach to implement additional analyses or modify the existing scripts and notebooks for more specific needs and experimentations
 
 If you have any questions or feedback, don't hesitate to reach out. Happy analyzing! 🎉
