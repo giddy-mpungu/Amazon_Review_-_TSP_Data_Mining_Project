@@ -129,6 +129,10 @@ The problem involves several steps: enumerating possible paths, calculating dist
 
 Python NoteBook Here:
 
+## Authors
+- **Gideon Mpungu**: [gmbugampungu@gmail.com](mailto:gmbugampungu@gmail.com)
+- **Africano Byamugisha**: [africanobyamugisha@gmail.com](mailto:africanobyamugisha@gmail.com)
+
 ## Conclusion
 
 You can extend this approach to implement additional analyses or modify the existing scripts and notebooks for more specific needs and experimentations
